@@ -1,7 +1,5 @@
 package com.guilhermedaniel.cursomc.resources;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +18,12 @@ public class CategoriaResource {
 	
 	@Autowired
 	private CategoriaService service;
+	
+	@RequestMapping(method=RequestMethod.GET)
+	public ResponseEntity<List<Categoria>> findAll() {
+		List<Categoria> obj = service.findAll();
+		return ResponseEntity.ok().body(obj);
+	}
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	public ResponseEntity<Categoria> findById(@PathVariable Integer id) {
