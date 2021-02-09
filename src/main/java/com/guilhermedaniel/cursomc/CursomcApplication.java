@@ -2,23 +2,17 @@ package com.guilhermedaniel.cursomc;
 
 import java.util.Arrays;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 250648ca3baf7738e617481fa910ecd0fc9834f0
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.guilhermedaniel.cursomc.domain.Categoria;
-<<<<<<< HEAD
+
 import com.guilhermedaniel.cursomc.domain.Produto;
 import com.guilhermedaniel.cursomc.repositories.CategoriaRepository;
 import com.guilhermedaniel.cursomc.repositories.ProdutoRepository;
-=======
-import com.guilhermedaniel.cursomc.repositories.CategoriaRepository;
->>>>>>> 250648ca3baf7738e617481fa910ecd0fc9834f0
+
 
 @SpringBootApplication
 public class CursomcApplication implements CommandLineRunner {
@@ -27,18 +21,6 @@ public class CursomcApplication implements CommandLineRunner {
 		SpringApplication.run(CursomcApplication.class, args);
 	}
 	
-	@Autowired
-	private CategoriaRepository categoriaRepository;
-	
-	@Override
-	public void run(String... args) throws Exception {
-		
-		Categoria cat1 = new Categoria(null, "Informática");
-		Categoria cat2 = new Categoria(null, "Escritório");
-		
-		categoriaRepository.saveAll(Arrays.asList(cat1, cat2));
-	}
-
 	@Autowired
 	private CategoriaRepository categoriaRepository;
 	
